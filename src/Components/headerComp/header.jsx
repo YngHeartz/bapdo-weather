@@ -4,7 +4,8 @@ const Headerofsite = () => {
 
     return (
         <>
-            <h1>Weather bapdo</h1>
+            <h1 class="font-extrabold">Bapdo Weather</h1>
+            <img src="/assets/weather_dribbble_size.gif.gif"/>
         </>
     );
 }

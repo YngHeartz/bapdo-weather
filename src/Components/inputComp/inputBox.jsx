@@ -55,7 +55,7 @@ if (weatherData && weatherData.weather && weatherData.weather.length > 0) {
     return (
         <>
             <input type="text" value={location} onChange={handleInputChange} placeholder="Enter location" />
-            <img src={imageUrl} alt="Weather condition" />
+            {/* <img src={imageUrl} alt="Weather condition" /> */}
         </>
     );
 }
