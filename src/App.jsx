@@ -4,7 +4,6 @@ import Input from './Components/inputComp/inputBox'
 import Weather from './Components/weatherCardComp/weatherCard'
 import './App'
 function App() {
-const {location, setlocation} = useState('');
 
   return (
     <>
