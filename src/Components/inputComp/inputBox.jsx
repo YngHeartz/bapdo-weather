@@ -9,6 +9,8 @@ const Input = () => {
 
     const API_KEY = "31599c86c9bbaf0199c446af849f68fc";
 
+    
+
     const fetchWeatherData = async () => {
         try {
             const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${API_KEY}`);
@@ -27,30 +29,37 @@ const Input = () => {
     const handleInputChange = (e) => {
         setLocation(e.target.value);
     };
-
+    
+    const handleKeyDown = (e) => {
+            // Check if the Enter key (keyCode 13) is pressed
+            if (e.keyCode === 13) {
+                fetchWeatherData();
+            }
+        };
     return (
-        <div className = "flex flex-col items-center justify-center mb-12 mt-2">
-            <div className = "relative mb-4">
+        <div className="flex flex-col items-center justify-center mb-12 mt-2">
+            <div className="relative mb-4">
                 <input
-                    className = "p-2 pr-10 border rounded shadow-md shadow-dark-600" 
-                    type = "text" 
-                    value={location} 
-                    onChange={handleInputChange} 
-                    placeholder="Enter location. . ." 
+                    className="p-2 pr-10 border rounded shadow-md shadow-dark-600"
+                    type="text"
+                    value={location}
+                    onChange={handleInputChange}
+                    onKeyDown={handleKeyDown} // Add this line
+                    placeholder="Enter location. . ."
                 />
-                <button 
-                    onClick = {fetchWeatherData} 
-                    className = "absolute top-3.5 transform -translate-y-1/2 bg-blue-500 text-white p-2 rounded m-2"
+                <button
+                    onClick={fetchWeatherData}
+                    className="absolute top-3.5 transform -translate-y-1/2 bg-blue-500 text-white p-2 rounded m-2"
                 >
                     Search
                 </button>
             </div>
-            
+
             {error && <div className="mb-4 text-red-500">{error}</div>}
-            
+
             {/* Separate card for WeatherCard component */}
-            <div className = "border p-4 rounded shadow-md mt-20">
-                {showWeather && <WeatherCard weatherData = {weatherData} />}
+            <div className="border p-4 rounded shadow-md mt-20">
+                {showWeather && <WeatherCard weatherData={weatherData} />}
             </div>
         </div>
     );
