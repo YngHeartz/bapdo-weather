@@ -22,11 +22,11 @@ const Navbar = () => {
                     /> {/* Use the Hamburger icon image */}
                 </button>
                 {isOpen && (
-                    <ul className="absolute top-full left-0 text-white bg-black p-2">
-                        <li className="mb-2">
+                    <ul className="absolute top-full left-0 text-black p-3 text-3xl">
+                        <li className="mb-5">
                             <a href="#">What is Bapdo?</a>
                         </li>
-                        <li className="mb-2">
+                        <li className="mb-5">
                             <a href="#">Contact</a>
                         </li>
                         <li>
