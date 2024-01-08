@@ -15,7 +15,7 @@ const WeatherCard = ({ weatherData }) => {
             <div className="bg-gray-600 rounded-md text-white m-5 p-3">
                 <p>Temperature: {temperatureF}F</p>
                 <p>Description: {weatherData.weather[0].description}</p>
-                <img className="" src={iconUrl} alt={weatherData.weather[0].description} />
+                <img className="size-16" src={iconUrl} alt={weatherData.weather[0].description} />
             </div>
         </div>
     );
