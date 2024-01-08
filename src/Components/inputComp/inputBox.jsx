@@ -17,7 +17,7 @@ const Input = () => {
             }
             const data = await response.json();
             setWeatherData(data);
-            setShowWeather(true); // Set to true once data is fetched
+            setShowWeather(true);
             setError(null); 
         } catch (error) {
             setError(error.message);
