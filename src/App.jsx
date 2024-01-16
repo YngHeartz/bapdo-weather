@@ -1,10 +1,18 @@
 import { useState } from 'react'
+
+//Rendered Components
 import Headerofsite from './Components/headerComp/header'
 import Input from './Components/inputComp/inputBox'
 import WeatherCard from './Components/weatherCardComp/weatherCard'
 import About from './Components/AboutBapto/aboutBapto'
-import './App'
+import Contact from './Components/Contact/contact'
 import Navbar from './Components/navbarComp/navbar'
+import HowToUse from './Components/howToUse/howtouse'
+//End of rendered Components
+
+//Styles
+import './App'
+//End of styles
 function App() {
 
   return (
@@ -18,6 +26,10 @@ function App() {
       <WeatherCard />
 
       <About />
+
+      <Contact />
+
+      <HowToUse />
       
     </>
   )

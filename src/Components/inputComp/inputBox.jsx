@@ -37,7 +37,7 @@ const Input = () => {
             }
         };
     return (
-        <div className="flex flex-col items-center justify-center mb-12 mt-2">
+        <div className="flex flex-col items-center justify-center mb-12 mt-2 text-xl">
             <div className="relative mb-4">
                 <input
                     className="p-2 pr-10 border rounded shadow-md shadow-dark-600"

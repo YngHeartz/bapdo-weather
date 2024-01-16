@@ -10,7 +10,7 @@ const WeatherCard = ({ weatherData }) => {
     const iconUrl = `http://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`;
 
     return (
-        <div className="mt-2">
+        <div className="mt-2 text-xl">
             <h1 className="bg-gray-600 rounded-md text-center text-white m-3 p-3">Location: {weatherData.name}</h1>
             <div className="bg-gray-600 rounded-md text-white m-5 p-3">
                 <p>Temperature: {temperatureF}F</p>
