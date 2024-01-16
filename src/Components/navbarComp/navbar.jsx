@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Hamburger from "../../assets/Hamburger_icon.svg.png";
+import Arrow from "../../assets/right-arrow.png";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +16,7 @@ const Navbar = () => {
                     onClick={toggleDropdown}
                 >
                     <img 
-                        src={Hamburger} 
+                        src={Arrow} 
                         alt="Hamburger Menu" 
                         className={`transition-transform duration-300 ${isOpen ? 'rotate-90' : ''}`} 
                     /> 
