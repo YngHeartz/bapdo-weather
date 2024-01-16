@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 //Rendered Components
 import Headerofsite from './Components/headerComp/header'
