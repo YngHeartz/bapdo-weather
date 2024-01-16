@@ -16,7 +16,7 @@ const Navbar = () => {
         <button className="size-11" onClick={toggleDropdown}>
           <img
             src={Arrow}
-            alt="Hamburger Menu"
+            alt="Arrow Menu"
             className={`transition-transform duration-300 ${
               isOpen ? "rotate-90" : ""
             }`}
@@ -24,22 +24,29 @@ const Navbar = () => {
         </button>
         {isOpen && (
           <ul className="absolute top-full left-0 text-black p-3 text-3xl">
+            <ScrollLink to="Home" smooth={true} duration={1200}>
+              <li className="mb-5 hover:text-blue-300 hover:ml-4">
+                <a href="Home" className="nav-link">
+                  Home
+                </a>
+              </li>
+            </ScrollLink>
             <ScrollLink to="About" smooth={true} duration={1200}>
-              <li className="mb-5 hover:text-blue-300 hover:ml-6">
+              <li className="mb-5 hover:text-blue-300 hover:ml-4">
                 <a href="About" className="nav-link">
                   About
                 </a>
               </li>
             </ScrollLink>
             <ScrollLink to="Contact" smooth={true} duration={1500}>
-              <li className="mb-5 hover:text-blue-300 hover:ml-6">
+              <li className="mb-5 hover:text-blue-300 hover:ml-4">
                 <a href="Contact" className="nav-link">
                   Contact
                 </a>
               </li>
             </ScrollLink>
             <ScrollLink to="HowtoUse" smooth={true} duration={1700}>
-              <li className="mb-5 hover:text-blue-300 hover:ml-6">
+              <li className="mb-5 hover:text-blue-300 hover:ml-4">
                 <a href="HowtoUse" className="nav-link">
                   How to Use
                 </a>
