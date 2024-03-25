@@ -1,9 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Arrow from "../../assets/right-arrow.png";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [theme, setTheme] = useState("light");
+  useEffect(() => {
+    if(theme === "dark"){
+      document.documentElement.classList.add("dark");
+    }
+    else{
+      document.documentElement.classList.remove("dark");
+    }
+  },[theme]);
+  
+  const handleThemeChange = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -32,28 +45,28 @@ const Navbar = () => {
               </li>
             </ScrollLink>
             <ScrollLink to="About" smooth={true} duration={1200}>
-              <li className="mb-5 hover:text-blue-300 hover:ml-4 transition-all duration-500">
+              <li className="mb-5 hover:text-purple-300 hover:ml-4 transition-all duration-500">
                 <a href="About" className="nav-link">
                   About
                 </a>
               </li>
             </ScrollLink>
             <ScrollLink to="Contact" smooth={true} duration={1500}>
-              <li className="mb-5 hover:text-blue-300 hover:ml-4 transition-all duration-500">
+              <li className="mb-5 hover:text-pink-300 hover:ml-4 transition-all duration-500">
                 <a href="Contact" className="nav-link">
                   Contact
                 </a>
               </li>
             </ScrollLink>
             <ScrollLink to="HowtoUse" smooth={true} duration={1700}>
-              <li className="mb-5 hover:text-blue-300 hover:ml-4 transition-all duration-700 text-nowrap">
+              <li className="mb-5 hover:text-red-300 hover:ml-4 transition-all duration-700 text-nowrap">
                 <a href="HowtoUse" className="nav-link">
                   How to Use
                 </a>
               </li>
             </ScrollLink>
             
-            <div className="size-14 mb-5 hover:cursor-pointer hover:text-yellow-200 hover:bg-yellow-200 hover:rounded-lg transition-all duration-500 text-nowrap">
+            <div className="size-14 mb-5 hover:cursor-pointer transition-all duration-500 text-nowrap">
               <img src="src/assets/dark-mode.svg" alt="Dark Mode toggle Button" />
               Dark or Light
             </div>

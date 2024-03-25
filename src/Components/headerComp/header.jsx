@@ -1,14 +1,13 @@
 import React from 'react';
+import weather from "../../assets/weather.json"; // Adjusted import path
+import Lottie from 'lottie-react';
 
 const Headerofsite = () => {
     return (
         <div className="flex flex-col items-center justify-center mt-10 ">
             <h1 className="font-extrabold text-6xl mb-4 text-blue-300" id='Home'>Bapdo Weather</h1>
-            <img 
-                className="w-40 h-40 object-cover rounded-full mb-10" 
-                src="src/assets/weather_dribbble_size.gif.gif"
-                alt="Weather GIF"
-            />
+            <Lottie animationData={weather} className='size-80' />
+
         </div>
     );
 }
