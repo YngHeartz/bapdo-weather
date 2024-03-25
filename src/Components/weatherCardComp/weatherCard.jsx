@@ -1,6 +1,7 @@
 import React from "react";
 
 const WeatherCard = ({ weatherData }) => {
+    // If there is no data to return nothing will be returned to the user
     if (!weatherData) return null;
 
     // Calculate temperature in Fahrenheit and round it to two decimal places
