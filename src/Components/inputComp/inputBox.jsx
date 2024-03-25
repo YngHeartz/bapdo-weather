@@ -63,7 +63,7 @@ const Input = () => {
 
             {/* This is where the weather data will appear but will only appear when data is entered into the field and fetched from the api if not it will stay hidden */}
             {weatherData && (
-                <div className="border p-4 rounded shadow-md mt-20">
+                <div className="border p-4 rounded shadow-md mt-20 bg-pink-200">
                     {showWeather && <WeatherCard weatherData={weatherData} />}
                 </div>
             )}
