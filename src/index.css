@@ -6,3 +6,6 @@ body{
     /* background-color: rgb(150, 189, 213); */
     font-weight: bold;
 }
+::selection {
+    background: #855cd6;
+  }
