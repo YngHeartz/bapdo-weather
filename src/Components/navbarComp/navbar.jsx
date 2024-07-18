@@ -65,11 +65,6 @@ const Navbar = () => {
                 </a>
               </li>
             </ScrollLink>
-            
-            <div className="size-14 mb-5 hover:cursor-pointer transition-all duration-500 text-nowrap">
-              <img src="src/assets/dark-mode.svg" alt="Dark Mode toggle Button" />
-              Dark or Light
-            </div>
           </ul>
         )}
       </div>
